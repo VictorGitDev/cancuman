@@ -51,7 +51,7 @@ body{
     white-space: nowrap;
     position: relative;
     padding: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     padding-top: 0px;
     margin-left: 80px;
     margin-right: 100px;
@@ -201,6 +201,69 @@ body{
     line-height: 25px;
 
 }
-
-
-
+/*texto*/
+.h1{
+    padding-top: 100px;
+    text-align: center;
+    color: rgb(126, 177, 68);
+}
+/*imagenes*/
+.verde{
+    float: left;
+    width: 25%;
+    margin-left: 2%;
+}
+/*titulo */
+.titulo{
+    margin-top: 30px;
+    text-align: center;
+    color: rgba(9, 228, 9, 0.623);
+    font-size: 50px;
+    font-family: 'Fira Sans', sans-serif;
+}
+/*imformacion*/
+.texto{
+    color: rgb(31, 174, 218);
+    padding-left: 30%;
+    margin-top: 5%;
+    font-family: 'Fira Sans', sans-serif;
+}
+/*imagenes*/
+figure{
+    margin: 15px;
+    display: inline-block;
+    border: 3px solid rgb(140, 140, 5);
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+}
+figcaption{
+    color: seashell;
+    transition: all 0,3s;
+    background: rgba( 0, 0, 0,0.7);
+    position: absolute;
+    left: 0px;
+    bottom: -375px;
+    width: 90%;
+    padding: 23%;
+}
+figure:hover figcaption{
+    bottom: 0px;
+}
+/*configuraciones de curiosidades*/
+.prenombre {
+    text-align: center;
+    color: chartreuse;
+    font-family: 'Fira Sans', sans-serif;
+}
+.biografia{
+    height: 20px;
+    text-align: center;
+    color: rgba(128, 255, 0, 0.589);
+    font-family: 'Fira Sans', sans-serif;
+}
+.biografi{
+    color: rgba(128, 255, 0, 0.589);
+    left: auto;
+    font-family: 'Fira Sans', sans-serif;
+}
