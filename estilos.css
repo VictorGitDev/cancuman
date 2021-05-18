@@ -1,0 +1,143 @@
+/*menu de navegacion*/
+.header{
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 100%;
+    height: 100px;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    color: rgb(199, 164, 50);
+    font-size: 40px;
+}
+.links{
+    width: 70%;
+    height: 50%;
+    font-size: 30px;
+}
+.links ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    text-decoration:none;
+    color: rgb(226, 99, 99);
+    align-items: center
+}
+/*imagenes de cambio*/
+.img{
+    text-align: center;
+    padding-right: 60%;
+    padding-left: 5%;
+    
+}
+ .h3{
+     color: beige;
+ }   
+ .h3{
+     color: beige;
+ }
+ .div{
+     color: beige;
+ }
+ .h1{
+     color: bisque;
+     text-align: center;
+ }
+.galeria{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 130px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.galeria li{
+    margin: px;
+}
+.galeria img{
+    width: 350px;
+    height: 300px;
+    border: 5px solid rgba(204, 207, 40, 0.288);
+}
+/*estilos del modal*/
+.modal{
+ position: absolute;
+ top: -100%;
+}
+.modal:target{
+    
+    transition: all 0.2s;
+    position: fixed;
+    background:rgba(7, 7, 7, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal h3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+.imagen{
+    width: 100%;
+    height: 50%;
+}
+.imagen a{
+    color: wheat;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+.imagen img{
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid wheat;
+    box-sizing: border-box;
+    
+}
+.cerrar{
+    display: block;
+    background: chartreuse;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    text-align: center;
+    text-decoration: cornflowerblue;
+    font-size: 75px;
+    color: black;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+
+}
