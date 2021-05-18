@@ -254,7 +254,16 @@ figure:hover figcaption{
 .prenombre {
     text-align: center;
     color: chartreuse;
+    font-family: 'Fira Sans', sans-serif;
 }
 .biografia{
-    color: rgba(128, 255, 0, 0.589)
+    height: 20px;
+    text-align: center;
+    color: rgba(128, 255, 0, 0.589);
+    font-family: 'Fira Sans', sans-serif;
+}
+.biografi{
+    color: rgba(128, 255, 0, 0.589);
+    left: auto;
+    font-family: 'Fira Sans', sans-serif;
 }
