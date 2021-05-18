@@ -201,34 +201,6 @@ body{
     line-height: 25px;
 
 }
-/*texto*/
-.h1{
-    padding-top: 100px;
-    text-align: center;
-    color: rgb(126, 177, 68);
-}
-/*imagenes*/
-.verde{
-    float: left;
-    width: 25%;
-    margin-left: 5%;
-}
-/*titulo */
-.titulo{
-    margin-top: 100px;
-    text-align: center;
-    color: rgba(9, 228, 9, 0.623);
-    font-size: 50px;
-    font-family: 'Fira Sans', sans-serif;
-}
-/*imformacion*/
-.texto{
-    color: rgb(31, 174, 218);
-    padding-left: 30%;
-    margin-top: 5%;
-    font-family: 'Fira Sans', sans-serif;
-}
 
 
 
-    
