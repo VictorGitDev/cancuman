@@ -57,10 +57,13 @@
 }
 /*menu desplegable*/
 * {
-    padding: 0px;
+    padding: px;
     margin: 0px;
     font-family: cursive;
-    
+    width: auto;
+    height: auto;
+    right: auto;
+    max-width: 100%;
 }
 .header{
     margin: auto;
