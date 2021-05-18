@@ -228,3 +228,33 @@ body{
     margin-top: 5%;
     font-family: 'Fira Sans', sans-serif;
 }
+/*imagenes*/
+figure{
+    margin: 15px;
+    display: inline-block;
+    border: 3px solid rgb(140, 140, 5);
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
+}
+figcaption{
+    color: seashell;
+    transition: all 0,3s;
+    background: rgba( 0, 0, 0,0.7);
+    position: absolute;
+    left: 0px;
+    bottom: -375px;
+    width: 90%;
+    padding: 23%;
+}
+figure:hover figcaption{
+    bottom: 0px;
+}
+/*configuraciones de curiosidades*/
+.prenombre {
+    text-align: center;
+    color: chartreuse;
+}
+.biografia{
+    color: rgba(128, 255, 0, 0.589)
+}
