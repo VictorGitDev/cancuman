@@ -131,7 +131,7 @@ header{
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     cursor: pointer;
 }
-.imagen-ligth{
+.imagen-light{
     position: fixed;
     background: rgba(0,0,0, .6);
     width: 100%;
