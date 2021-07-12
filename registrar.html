@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="logeo.css">
-    <title>Firebase user</title>
+    <title>Document</title>
 </head>
 <body>
-  <!-- registor de Usuarios -->
+      <!-- registor de Usuarios -->
+  <section class="form-register">
+    <h4>Registro de usuarios</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="email" name="email" id="email" placeholder="colocar a qui tu email">
+    <input class="controls" type="password" name="password" id="password" placeholder="colocar a qui tu contraseña">
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <button class="botons" onclick="enviar()">Enviar</button>
+    <p><a href="index.html">¿Ya tengo Cuenta?</a></p>
+  </section>
 
-
-    <section class="form-register">
-      <h4>Login de Usuarios</h4>
-      <input class="controls" type="email" name="emailL" id="emailL" placeholder="colocar a qui tu email"> <br><br>
-      <input class="controls" type="password" name="passwordL" id="passwordL" placeholder="colocar a qui tu contraseña"><br><br>
-      <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-      <button class="botons" onclick="ingresar()">Ingresar</button>
-      <p><a href="registrar.html">¿No tengo Cuenta?</a></p>
-    </section>
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
 
@@ -62,26 +61,25 @@
   }
 });
 
-
-
-  function ingresar() {
-      var emailL = document.getElementById('emailL').value;
-      var passwordL = document.getElementById('passwordL').value;
+  function enviar() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
     //alert("email"+ email + " / password" + password);
 
-    firebase.auth().signInWithEmailAndPassword(emailL, passwordL)
+    firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
-    // Signed in
     var user = userCredential.user;
-    // ...
-    location.href="menu.html";
+    location.href="index.html";
+
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
+    //...
     alert(errorMessage);
+
   });
-}
+  }
 </script>
 </body>
 </html>
