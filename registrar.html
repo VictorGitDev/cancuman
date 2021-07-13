@@ -18,6 +18,7 @@
     <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
     <button class="botons" onclick="registrar()">Enviar</button>
     <p><a href="index.html">¿Ya tengo Cuenta?</a></p>
+    <h4 class="llamado" id="login" style="color: red;"></h4>
   </section>
 
       <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -60,11 +61,11 @@
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    document.getElementById('login').innerHTML = `<p>Estas Logeado con el correo` + user.email + ` ` +
+    document.getElementById('login').innerHTML = `<p>Estas Registrado con el correo` + user.email + ` ` +
       `<p> <button onclick="cerrarSesion()">Cerrar Sesión</button>`;
     console.log(user)
   } else {
-    document.getElementById('login').innerHTML = "No Estas Logeado"; 
+    document.getElementById('login').innerHTML = "No Estas Registrado"; 
   }
 });
 
