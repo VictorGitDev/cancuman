@@ -16,7 +16,7 @@
     <input class="controls" type="email" name="email" id="email" placeholder="colocar a qui tu email">
     <input class="controls" type="password" name="password" id="password" placeholder="colocar a qui tu contraseña">
     <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    <button class="botons" onclick="enviar()">Enviar</button>
+    <button class="botons" onclick="registrar()">Enviar</button>
     <p><a href="index.html">¿Ya tengo Cuenta?</a></p>
   </section>
 
@@ -41,7 +41,7 @@
     measurementId: "G-C5EERQNFDE"
   };
   // Initialize Firebase
-  var proyecto = firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
   //console.log(proyecto.name);
   firebase.analytics();
 
@@ -50,18 +50,25 @@
     var displayName = user.displayName;
     var email = user.email;
     var emailVerified = user.emailVerified;
+    if(emailVerified === false){
+      textVer = "- Correo no verificado";
+    }else{
+      textVer="- Correo verificado"
+    }
+
     var photoURL = user.photoURL
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    document.getElementById('login').innerHTML = "Estas Logeado" + user.email;
+    document.getElementById('login').innerHTML = `<p>Estas Logeado con el correo` + user.email + ` ` +
+      `<p> <button onclick="cerrarSesion()">Cerrar Sesión</button>`;
     console.log(user)
   } else {
     document.getElementById('login').innerHTML = "No Estas Logeado"; 
   }
 });
 
-  function enviar() {
+  function registrar() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
     //alert("email"+ email + " / password" + password);
@@ -78,8 +85,37 @@
     //...
     alert(errorMessage);
 
+  })
+  .then(function(){
+    verificarCorreo();
   });
-  }
+}
+function verificarCorreo(){
+  firebase.auth().currentUser.sendEmailVerification()
+  .then(() => {
+    // Email verification sent!
+    // ...
+    alert("Email verification sent¡")
+  });
+
+}
+function cerrarSesion() {
+  firebase.auth().signOut()
+  .then(function () {
+  console.log('salir');
+  })
+  .catch(function(error) {
+     console.log(error);
+   })
+
+//   firebase.auth().signOut().then(() => {
+//     console.log('salir');
+// }).catch((error) => {
+//   console.log(error);
+// });
+  
+}
+
 </script>
 </body>
 </html>

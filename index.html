@@ -40,7 +40,7 @@
     measurementId: "G-C5EERQNFDE"
   };
   // Initialize Firebase
-  var proyecto = firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
   //console.log(proyecto.name);
   firebase.analytics();
 
@@ -49,11 +49,18 @@
     var displayName = user.displayName;
     var email = user.email;
     var emailVerified = user.emailVerified;
+    if(emailVerified === false){
+      textVer = "- Correo no verificado";
+    }else{
+      textVer="- Correo verificado"
+    }
+
     var photoURL = user.photoURL
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    document.getElementById('login').innerHTML = "Estas Logeado" + user.email;
+    document.getElementById('login').innerHTML = `<p>Estas Logeado con el correo` + user.email + ` ` +
+      `<p> <button onclick="cerrarSesion()">Cerrar Sesión</button>`;
     console.log(user)
   } else {
     document.getElementById('login').innerHTML = "No Estas Logeado"; 
@@ -79,6 +86,30 @@
     var errorMessage = error.message;
     alert(errorMessage);
   });
+}
+function verificarCorreo(){
+  firebase.auth().currentUser.sendEmailVerification()
+  .then(() => {
+    // Email verification sent!
+    // ...
+  });
+}
+
+function cerrarSesion() {
+  firebase.auth().signOut()
+  .then(function () {
+  console.log('salir');
+  })
+  .catch(function(error) {
+     console.log(error);
+   })
+
+//   firebase.auth().signOut().then(() => {
+//     console.log('salir');
+// }).catch((error) => {
+//   console.log(error);
+// });
+  
 }
 </script>
 </body>
